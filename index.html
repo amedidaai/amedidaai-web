@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Medida AI — Sistemas inteligentes a medida. Creamos apps internas, agentes de IA y automatizaciones personalizadas para empresas.">
+  <title>A Medida AI — Sistemas inteligentes a medida</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('Fg4qhNRdePCgKgVn4');</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #FAFAF7; color: #111827; -webkit-font-smoothing: antialiased; }
+    .step-connector::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: calc(50% + 20px);
+      right: calc(-50% + 20px);
+      height: 1px;
+      background-color: #E5E7EB;
+      z-index: 0;
+    }
+    @media (max-width: 1023px) {
+      .step-connector::after { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ====================================================
+       HEADER
+  ===================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#FAFAF7]/95 backdrop-blur-sm border-b border-[#E5E7EB]">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+
+      <a href="#" class="flex items-center">
+        <img src="logo.png" alt="A Medida AI" class="w-[180px] sm:w-[220px] h-auto">
+      </a>
+
+      <button onclick="openModal()"
+         class="bg-[#071A33] text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap cursor-pointer">
+        Agendar demo
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ====================================================
+       HERO
+  ===================================================== -->
+  <section class="pt-36 pb-28 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+
+      <span class="inline-flex items-center gap-2 border border-[#E5E7EB] bg-white rounded-full px-4 py-1.5 text-sm text-[#4B5563] mb-10">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#B49A5A] flex-shrink-0"></span>
+        Sistemas inteligentes a medida
+      </span>
+
+      <h1 class="text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] font-extrabold text-[#071A33] leading-[1.08] tracking-tight mb-6">
+        Convertimos procesos manuales en sistemas inteligentes.
+      </h1>
+
+      <p class="text-lg md:text-xl text-[#4B5563] leading-relaxed max-w-2xl mx-auto mb-12">
+        Creamos apps internas, agentes de IA y automatizaciones personalizadas para empresas que gestionan clientes, documentos y operaciones por WhatsApp, Excel o email.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="openModal()"
+           class="w-full sm:w-auto bg-[#071A33] text-white font-semibold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity text-base cursor-pointer">
+          Agendar demo
+        </button>
+        <a href="#caso-de-uso"
+           class="w-full sm:w-auto bg-white text-[#071A33] font-semibold px-8 py-4 rounded-xl border border-[#E5E7EB] hover:border-[#071A33] transition-colors text-base">
+          Ver caso de uso
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       PROBLEMS
+  ===================================================== -->
+  <section class="py-28 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="max-w-2xl mb-16">
+        <h2 class="text-3xl md:text-[2.5rem] font-bold text-[#071A33] leading-tight">
+          Tu empresa no necesita más herramientas. Necesita que sus procesos funcionen mejor.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] hover:border-[#B49A5A]/50 transition-colors">
+          <div class="mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B49A5A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-[#111827] mb-1.5">WhatsApps desordenados</h3>
+          <p class="text-sm text-[#4B5563] leading-relaxed">Solicitudes que llegan por WhatsApp y se pierden entre conversaciones.</p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] hover:border-[#B49A5A]/50 transition-colors">
+          <div class="mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B49A5A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <line x1="17" y1="8" x2="23" y2="14"/>
+              <line x1="23" y1="8" x2="17" y2="14"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-[#111827] mb-1.5">Leads sin seguimiento</h3>
+          <p class="text-sm text-[#4B5563] leading-relaxed">Oportunidades que nadie vuelve a contactar a tiempo.</p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] hover:border-[#B49A5A]/50 transition-colors">
+          <div class="mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B49A5A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-[#111827] mb-1.5">Presupuestos manuales</h3>
+          <p class="text-sm text-[#4B5563] leading-relaxed">Tiempo invertido en crear cada propuesta desde cero.</p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] hover:border-[#B49A5A]/50 transition-colors">
+          <div class="mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B49A5A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-[#111827] mb-1.5">Documentos perdidos</h3>
+          <p class="text-sm text-[#4B5563] leading-relaxed">Facturas e información repartidas entre chats, correos y carpetas.</p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] hover:border-[#B49A5A]/50 transition-colors">
+          <div class="mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B49A5A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="3" y1="15" x2="21" y2="15"/>
+              <line x1="9" y1="3" x2="9" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-[#111827] mb-1.5">Procesos en Excel</h3>
+          <p class="text-sm text-[#4B5563] leading-relaxed">Operaciones que dependen de un archivo que solo una persona entiende.</p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] hover:border-[#B49A5A]/50 transition-colors">
+          <div class="mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B49A5A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-[#111827] mb-1.5">Preguntas repetidas</h3>
+          <p class="text-sm text-[#4B5563] leading-relaxed">Horas del equipo respondiendo siempre las mismas preguntas.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       WHAT WE BUILD
+  ===================================================== -->
+  <section class="py-28 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="max-w-2xl mb-16">
+        <h2 class="text-3xl md:text-[2.5rem] font-bold text-[#071A33] leading-tight mb-4">
+          Soluciones a medida, adaptadas a cómo trabaja tu empresa.
+        </h2>
+        <p class="text-lg text-[#4B5563] leading-relaxed">
+          No vendemos software genérico. Construimos sistemas adaptados a los procesos reales de tu negocio.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] bg-white hover:shadow-[0_2px_16px_rgba(7,26,51,0.06)] transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-lg bg-[#071A33] flex items-center justify-center flex-shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[#111827] mb-1.5">Agentes de WhatsApp</h3>
+              <p class="text-sm text-[#4B5563] leading-relaxed">Recogen y organizan información de clientes directamente desde sus mensajes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] bg-white hover:shadow-[0_2px_16px_rgba(7,26,51,0.06)] transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-lg bg-[#071A33] flex items-center justify-center flex-shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[#111827] mb-1.5">Chatbots con documentos</h3>
+              <p class="text-sm text-[#4B5563] leading-relaxed">Responden usando la información real de tu empresa, no respuestas genéricas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] bg-white hover:shadow-[0_2px_16px_rgba(7,26,51,0.06)] transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-lg bg-[#071A33] flex items-center justify-center flex-shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[#111827] mb-1.5">CRMs personalizados</h3>
+              <p class="text-sm text-[#4B5563] leading-relaxed">Seguimiento de clientes adaptado a tu proceso de venta, no al revés.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] bg-white hover:shadow-[0_2px_16px_rgba(7,26,51,0.06)] transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-lg bg-[#071A33] flex items-center justify-center flex-shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[#111827] mb-1.5">Apps internas</h3>
+              <p class="text-sm text-[#4B5563] leading-relaxed">Herramientas digitales para automatizar tareas repetitivas dentro de tu equipo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] bg-white hover:shadow-[0_2px_16px_rgba(7,26,51,0.06)] transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-lg bg-[#071A33] flex items-center justify-center flex-shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[#111827] mb-1.5">Automatización de propuestas</h3>
+              <p class="text-sm text-[#4B5563] leading-relaxed">Genera presupuestos y propuestas comerciales sin trabajo manual.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl border border-[#E5E7EB] bg-white hover:shadow-[0_2px_16px_rgba(7,26,51,0.06)] transition-shadow">
+          <div class="flex items-start gap-4">
+            <div class="w-9 h-9 rounded-lg bg-[#071A33] flex items-center justify-center flex-shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[#111827] mb-1.5">Gestión de tickets y facturas</h3>
+              <p class="text-sm text-[#4B5563] leading-relaxed">Centraliza, organiza y rastrea documentos y tareas en un solo lugar.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       USE CASE
+  ===================================================== -->
+  <section id="caso-de-uso" class="py-28 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+
+      <span class="inline-flex items-center gap-2 border border-[#E5E7EB] rounded-full px-3 py-1 text-xs text-[#4B5563] font-medium tracking-wide uppercase mb-6">
+        Caso de uso
+      </span>
+
+      <div class="mb-12">
+        <h2 class="text-3xl md:text-[2.5rem] font-bold text-[#071A33] leading-tight mb-4">
+          Catering AI Assistant
+        </h2>
+        <p class="text-lg text-[#4B5563] leading-relaxed max-w-2xl">
+          Un sistema inteligente para negocios de catering y eventos que convierte solicitudes de WhatsApp en propuestas listas para revisar.
+        </p>
+      </div>
+
+      <!-- Flow grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+
+        <div class="p-4 rounded-xl border border-[#E5E7EB] bg-[#FAFAF7]">
+          <span class="block text-xs font-semibold text-[#B49A5A] tracking-widest uppercase mb-2">01</span>
+          <span class="text-sm font-medium text-[#111827] leading-snug">Cliente solicita catering</span>
+        </div>
+
+        <div class="p-4 rounded-xl border border-[#E5E7EB] bg-[#FAFAF7]">
+          <span class="block text-xs font-semibold text-[#B49A5A] tracking-widest uppercase mb-2">02</span>
+          <span class="text-sm font-medium text-[#111827] leading-snug">IA recoge los datos</span>
+        </div>
+
+        <div class="p-4 rounded-xl border border-[#E5E7EB] bg-[#FAFAF7]">
+          <span class="block text-xs font-semibold text-[#B49A5A] tracking-widest uppercase mb-2">03</span>
+          <span class="text-sm font-medium text-[#111827] leading-snug">Sistema clasifica el lead</span>
+        </div>
+
+        <div class="p-4 rounded-xl border border-[#E5E7EB] bg-[#FAFAF7]">
+          <span class="block text-xs font-semibold text-[#B49A5A] tracking-widest uppercase mb-2">04</span>
+          <span class="text-sm font-medium text-[#111827] leading-snug">Sugiere menú y precio</span>
+        </div>
+
+        <div class="p-4 rounded-xl border border-[#E5E7EB] bg-[#FAFAF7]">
+          <span class="block text-xs font-semibold text-[#B49A5A] tracking-widest uppercase mb-2">05</span>
+          <span class="text-sm font-medium text-[#111827] leading-snug">Guarda en CRM</span>
+        </div>
+
+        <div class="p-4 rounded-xl border border-[#E5E7EB] bg-[#FAFAF7] border-[#B49A5A]/30">
+          <span class="block text-xs font-semibold text-[#B49A5A] tracking-widest uppercase mb-2">06</span>
+          <span class="text-sm font-medium text-[#111827] leading-snug">Genera propuesta comercial</span>
+        </div>
+
+      </div>
+
+      <div class="p-6 rounded-xl border border-[#E5E7EB] bg-[#FAFAF7]">
+        <p class="text-[#4B5563] leading-relaxed text-sm md:text-base">
+          El sistema recoge fecha, número de personas, lugar, presupuesto y preferencias. Después clasifica el lead, sugiere un menú, estima el precio y prepara la información para generar una propuesta comercial lista para revisar.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       HOW WE WORK
+  ===================================================== -->
+  <section class="py-28 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="max-w-xl mb-16">
+        <h2 class="text-3xl md:text-[2.5rem] font-bold text-[#071A33] leading-tight">
+          Empezamos pequeño. Escalamos solo si tiene sentido.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+
+        <!-- Connecting line (desktop only) -->
+        <div class="hidden lg:block absolute top-5 left-[calc(12.5%+1px)] right-[calc(12.5%+1px)] h-px bg-[#E5E7EB]" style="left: 52px; right: 52px;"></div>
+
+        <div class="flex flex-col gap-4">
+          <div class="w-10 h-10 rounded-full border-2 border-[#071A33] bg-white flex items-center justify-center text-[#071A33] font-bold text-sm flex-shrink-0 relative z-10">
+            1
+          </div>
+          <div>
+            <h3 class="font-semibold text-[#111827] mb-2">Diagnóstico</h3>
+            <p class="text-sm text-[#4B5563] leading-relaxed">Analizamos tu proceso actual y definimos qué automatizar primero.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="w-10 h-10 rounded-full border-2 border-[#071A33] bg-white flex items-center justify-center text-[#071A33] font-bold text-sm flex-shrink-0 relative z-10">
+            2
+          </div>
+          <div>
+            <h3 class="font-semibold text-[#111827] mb-2">MVP</h3>
+            <p class="text-sm text-[#4B5563] leading-relaxed">Construimos la primera versión funcional en semanas, no meses.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="w-10 h-10 rounded-full border-2 border-[#071A33] bg-white flex items-center justify-center text-[#071A33] font-bold text-sm flex-shrink-0 relative z-10">
+            3
+          </div>
+          <div>
+            <h3 class="font-semibold text-[#111827] mb-2">Producción</h3>
+            <p class="text-sm text-[#4B5563] leading-relaxed">Refinamos, probamos y desplegamos el sistema final.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="w-10 h-10 rounded-full border-2 border-[#B49A5A] bg-white flex items-center justify-center text-[#B49A5A] font-bold text-sm flex-shrink-0 relative z-10">
+            4
+          </div>
+          <div>
+            <h3 class="font-semibold text-[#111827] mb-2">Mantenimiento</h3>
+            <p class="text-sm text-[#4B5563] leading-relaxed">Ajustamos y mejoramos según evoluciona tu negocio.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       FINAL CTA
+  ===================================================== -->
+  <section class="py-32 px-6 bg-[#071A33]">
+    <div class="max-w-2xl mx-auto text-center">
+
+      <h2 class="text-3xl md:text-[2.5rem] font-bold text-white leading-tight mb-6">
+        ¿Tienes un proceso manual que quieres automatizar?
+      </h2>
+
+      <p class="text-lg text-white/65 leading-relaxed mb-10">
+        Agenda una llamada de 30 minutos y vemos si tiene sentido crear una demo personalizada para tu negocio.
+      </p>
+
+      <button onclick="openModal()"
+         class="bg-[#B49A5A] text-white font-semibold px-10 py-4 rounded-xl hover:opacity-90 transition-opacity text-base cursor-pointer">
+        Agendar llamada
+      </button>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       FOOTER
+  ===================================================== -->
+  <footer class="border-t border-[#E4D9C3] bg-[#F5EFE3] px-6 md:px-16 py-12">
+  <div class="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-8">
+    
+      <img src="logo.png" alt="A Medida AI" class="w-[180px] md:w-[210px] h-auto">
+
+    <p class="text-sm text-[#6B7280]">
+      © 2026 A Medida AI · Sistemas inteligentes a medida
+    </p>
+  </div>
+</footer>
+
+
+  <!-- ====================================================
+       BOOKING MODAL
+  ===================================================== -->
+  <div id="booking-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-6" style="display:none!important;">
+    <div class="absolute inset-0 bg-[#071A33]/60 backdrop-blur-sm" onclick="closeModal()"></div>
+    <div class="relative bg-white rounded-2xl w-full max-w-md shadow-2xl overflow-hidden">
+
+      <div id="form-wrap" class="p-8">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-[#9CA3AF] hover:text-[#111827] transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+
+        <h3 class="text-xl font-bold text-[#071A33] mb-1">Agendar una llamada</h3>
+        <p class="text-sm text-[#4B5563] mb-6">Rellena el formulario y te contactamos en menos de 24h.</p>
+
+        <form id="booking-form">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-[#111827] mb-1.5">Nombre *</label>
+              <input type="text" name="name" required placeholder="Tu nombre completo"
+                class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-[#111827] text-sm placeholder-[#9CA3AF] outline-none focus:border-[#071A33] transition-colors">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-[#111827] mb-1.5">Email *</label>
+              <input type="email" name="email" required placeholder="tu@empresa.com"
+                class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-[#111827] text-sm placeholder-[#9CA3AF] outline-none focus:border-[#071A33] transition-colors">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-[#111827] mb-1.5">Teléfono *</label>
+              <input type="tel" name="telefono" required placeholder="+34 600 000 000"
+                class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-[#111827] text-sm placeholder-[#9CA3AF] outline-none focus:border-[#071A33] transition-colors">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-[#111827] mb-1.5">Empresa <span class="text-[#9CA3AF] font-normal">(opcional)</span></label>
+              <input type="text" name="empresa" placeholder="Nombre de tu empresa"
+                class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-[#111827] text-sm placeholder-[#9CA3AF] outline-none focus:border-[#071A33] transition-colors">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-[#111827] mb-1.5">¿Qué proceso quieres automatizar? <span class="text-[#9CA3AF] font-normal">(opcional)</span></label>
+              <textarea name="mensaje" rows="3" placeholder="Cuéntanos brevemente..."
+                class="w-full px-4 py-3 rounded-lg border border-[#E5E7EB] text-[#111827] text-sm placeholder-[#9CA3AF] outline-none focus:border-[#071A33] transition-colors resize-none"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" id="submit-btn"
+            class="mt-6 w-full bg-[#071A33] text-white font-semibold py-3.5 rounded-xl hover:opacity-90 transition-opacity text-sm">
+            Enviar solicitud
+          </button>
+          <p id="form-error" class="mt-3 text-xs text-red-500 text-center hidden">Algo salió mal. Inténtalo de nuevo.</p>
+        </form>
+      </div>
+
+      <div id="success-wrap" class="p-8 text-center hidden">
+        <div class="w-14 h-14 rounded-full bg-[#F0FDF4] flex items-center justify-center mx-auto mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-[#071A33] mb-2">¡Solicitud enviada!</h3>
+        <p class="text-sm text-[#4B5563] leading-relaxed">Te contactamos en menos de 24 horas para confirmar la llamada.</p>
+        <button onclick="closeModal()" class="mt-6 w-full bg-[#071A33] text-white font-semibold py-3.5 rounded-xl hover:opacity-90 transition-opacity text-sm">
+          Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById('booking-modal');
+
+    function openModal() {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    document.getElementById('booking-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('submit-btn');
+      var err = document.getElementById('form-error');
+      var form = this;
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+      err.classList.add('hidden');
+
+      var fd = new FormData(form);
+      var clientName  = fd.get('name');
+      var clientEmail = fd.get('email');
+      var clientPhone = fd.get('telefono');
+      var clientEmpresa = fd.get('empresa') || '—';
+      var clientMensaje = fd.get('mensaje') || '—';
+
+      try {
+        // 1. Notificación al equipo (Web3Forms)
+        var res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: '48dbcd79-06ff-492d-acb1-94a5f97fbdcf',
+            subject:    'Nueva solicitud de demo — A Medida AI',
+            from_name:  'A Medida AI Web',
+            name:       clientName,
+            email:      clientEmail,
+            telefono:   clientPhone,
+            empresa:    clientEmpresa,
+            mensaje:    clientMensaje
+          })
+        });
+        var data = await res.json();
+        if (!data.success) throw new Error('web3forms');
+
+        // 2. Confirmación al cliente (EmailJS) — no fatal
+        try {
+          await emailjs.send('service_2a6oob6', 'template_xtpvkvu', {
+            to_name:   clientName,
+            to_email:  clientEmail,
+            reply_to:  clientEmail,
+            telefono:  clientPhone,
+            empresa:   clientEmpresa,
+            mensaje:   clientMensaje
+          });
+        } catch(ejErr) {
+          console.error('EmailJS error:', ejErr.status, ejErr.text);
+        }
+
+        document.getElementById('form-wrap').classList.add('hidden');
+        document.getElementById('success-wrap').classList.remove('hidden');
+
+      } catch(_) {
+        btn.textContent = 'Enviar solicitud';
+        btn.disabled = false;
+        err.classList.remove('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
